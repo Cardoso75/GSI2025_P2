@@ -12,6 +12,7 @@
 */
 //	caixa de texto
 				document.getElementById('resTexto').innerHTML=formulario.exTexto.value;
+				document.getElementById('resDate').innerHTML=formulario.exData.value;
 //	file system object
 				document.getElementById('resFile').innerHTML=formulario.exFile.value;
 
@@ -38,6 +39,7 @@
 
 			function clearValues(formulario){
 				document.getElementById('resTexto').innerHTML="&nbsp";
+				document.getElementById('resDate').innerHTML="&nbsp";
 				document.getElementById('resFile').innerHTML="&nbsp";
 				document.getElementById('resCheckBox').innerHTML="&nbsp";
 				document.getElementById('resRadio').innerHTML="&nbsp";
@@ -79,7 +81,7 @@
 			<td>&nbsp;</td>
 			<td align="center" colspan="2">
 <!-- Caixa de texto :	type="TEXT" -->
-				<input type="text" name="exTexto" placeholder="escreva o seu nome" size="50" align="right" title="Digite o seu nome">
+				<input type="text" name="exTexto" placeholder="escreva o seu nome" size="50" align="right" title="Digite o seu nome" value="nome" readonly>
 <!--	placeholder indica o texto a ser exibido quando o campo está vazio 
 		title indica o texto a ser exibido quando o utilizador posiciona o cursor sobre o elemento do formulário
 				equivalente a 'alt' para elementos de imagem
@@ -87,7 +89,14 @@
 			</td>
 			<td id="resTexto">&nbsp;</td>
 		</tr>
-		
+			<tr>
+			<td>&nbsp;</td>
+			<td align="center" colspan="2">
+				<input type="date" name="exData" placeholder="escreva a data" size="50" align="left" title="Digite a data">
+			
+			</td>
+			<td id="resDate">&nbsp;</td>
+		</tr>	
 		<tr>
 			<td>&nbsp;</td>
 			<td align="center" colspan="2">
